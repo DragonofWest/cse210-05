@@ -61,7 +61,7 @@ class Cycle(Actor):
             if self._is_dead:
                 segment.set_color(constants.WHITE)
             else:
-                segment.set_color(constants.GREEN)
+                segment.set_color(constants.RED)
             self._segments.append(segment)
 
     def turn_head(self, velocity):
@@ -75,7 +75,7 @@ class Cycle(Actor):
             position = Point(x - i * constants.CELL_SIZE, y)
             velocity = Point(1 * constants.CELL_SIZE, 1)
             text = "8" if i == 0 else "#"
-            color = constants.YELLOW if i == 0 else constants.GREEN
+            color = constants.YELLOW if i == 0 else constants.RED
             
             segment = Segment(self)
             segment.set_position(position)
